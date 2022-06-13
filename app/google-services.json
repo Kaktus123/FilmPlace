@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "176160375096",
+    "firebase_url": "https://filmplayer-58038-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "filmplayer-58038",
+    "storage_bucket": "filmplayer-58038.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176160375096:android:417b55caa94559096d01cd",
+        "android_client_info": {
+          "package_name": "com.example.filmplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176160375096-4jfivs26vulasmolqjvjcfo3ecucvv3v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.filmplayer",
+            "certificate_hash": "87d917e012239414538c95e3af662a7a88457a5d"
+          }
+        },
+        {
+          "client_id": "176160375096-f155ejfhttinnvnisfcsseme8b9gadf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLN-ijcyHjaW3eH3P2BRZYZJJ9PVDtdTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176160375096-f155ejfhttinnvnisfcsseme8b9gadf7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

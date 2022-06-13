@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".fragment.MovieDetailsFragment">
+
+    <ImageView
+        android:id="@+id/movieBackdrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/jaws" />
+
+    <TextView
+        android:id="@+id/movieDetailsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="DEFAULT_TITLE"
+        style="@style/TextAppearance.Material3.TitleLarge"
+        />
+
+    <TextView
+        android:id="@+id/movieDetailsReleaseDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="DEFAULT_DATE"
+        style="@style/TextAppearance.Material3.TitleSmall"
+        android:layout_marginBottom="@dimen/margin"
+        />
+
+    <TextView
+        android:id="@+id/movieDetailsDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="DEFAULT_DESCRIPTION"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_marginBottom="@dimen/margin"
+        />
+
+    <TextView
+        android:id="@+id/movieDetailsScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="DEFAULT_SCORE"
+        style="@style/TextAppearance.Material3.TitleMedium"
+        android:layout_marginBottom="@dimen/margin"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/addToFavouritesBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addToFavourites"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            />
+        <Button
+            android:id="@+id/removeFromFavouritesBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/removeFromFavourites"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/addToWatchlistBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addToWatchlist"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            />
+        <Button
+            android:id="@+id/removeFromWatchlistBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/removeFromWatchlist"
+            android:layout_gravity="center_horizontal"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/streamingPlatformsDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/streamingPlatforms"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_marginTop="@dimen/margin"
+        />
+</LinearLayout>

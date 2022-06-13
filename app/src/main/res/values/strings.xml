@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FilmPlayer</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="favourite">Favourites</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="logout">Logout</string>
+    <string name="title">Title:</string>
+    <string name="productionYear">Year of production:</string>
+    <string name="searchBarHint">Enter movie title</string>
+    <string name="search">Search</string>
+    <string name="removeFromWatchlist">Remove from watchlist</string>
+    <string name="addToWatchlist">Add to watchlist</string>
+    <string name="removeFromFavourites">Remove from favourites</string>
+    <string name="addToFavourites">Add to favourites</string>
+    <string name="noFavouriteMovies">There are no favourite movies!</string>
+    <string name="noWatchlist">There are no movies in watchist!</string>
+    <string name="noMoviesFound">No movies found!</string>
+    <string name="streamingPlatforms">Movie is available at:</string>
+    <string name="streamingPlatformsNotAvailable">Movie is not available on any streaming platform!</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="my_value">100dp</dimen>
+    <dimen name="posterHeight">170dp</dimen>
+    <dimen name="margin">20dp</dimen>
+</resources>
