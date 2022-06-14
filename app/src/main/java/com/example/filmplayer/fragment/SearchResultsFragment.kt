@@ -129,10 +129,10 @@ class SearchResultsFragment : Fragment(R.layout.fragment_search_results) {
             val row = layoutInflater.inflate(R.layout.movie_found_row, parent, false)
 
             val titleTv = row.findViewById<TextView>(R.id.titleTv)
-            titleTv.text = "Title: ${mMoviesFound.get(position).title}"
+            titleTv.text = "${mMoviesFound.get(position).title}"
 
             val yearTv = row.findViewById<TextView>(R.id.yearTv)
-            yearTv.text = "Year of production: ${mMoviesFound.get(position).year}"
+            yearTv.text = "${mMoviesFound.get(position).year}"
 
             row.layoutParams = ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,

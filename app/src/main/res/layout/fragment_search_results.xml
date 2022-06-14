@@ -9,8 +9,13 @@
 
     <ListView
         android:id="@+id/moviesList"
+        style="@style/TextAppearance.MaterialComponents.Body1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/TextAppearance.MaterialComponents.Body1"
-        />
+        android:dividerHeight="2dp"
+        android:drawSelectorOnTop="false"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:smoothScrollbar="false" />
 </LinearLayout>
