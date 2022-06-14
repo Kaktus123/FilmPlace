@@ -6,31 +6,34 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center_horizontal"
-    tools:context=".fragment.LoginFragment">
+    tools:context=".fragment.LoginFragment"
+    android:background="@color/background"
+    >
 
     <ImageView
         android:id="@+id/iconIv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo" />
-
-    <TextView
-        android:id="@+id/captionTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Login and find your favourite films!"
-        style="@style/TextAppearance.Material3.TitleLarge"
-        android:layout_alignBaseline="@id/iconIv"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
-        />
+        android:layout_width="411dp"
+        android:layout_height="482dp"
+        android:src="@drawable/filmplacelogo" />
 
     <!--Google SignIn Button-->
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/googleSignInBtn"
+    <TextView
+        android:id="@+id/captionTv"
+        style="@style/TextAppearance.Material3.TitleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/iconIv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/second_text"
+        android:text="Login and find your favourite films!" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/googleSignInBtn"
+        android:layout_width="144dp"
+        android:layout_height="76dp"
+        android:color="@color/second_text"
         android:layout_centerInParent="true" />
 
 </LinearLayout>
