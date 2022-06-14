@@ -1,15 +1,16 @@
 package com.example.filmplayer.fragment
 
-import android.opengl.Visibility
+import android.content.res.ColorStateList
+import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.core.os.bundleOf
+import androidx.core.content.ContextCompat
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import com.example.filmfinder.dto.movie.details.MovieDetailsDTO
 import com.example.filmplayer.R
 import com.example.filmplayer.databinding.FragmentMovieDetailsBinding
@@ -18,6 +19,7 @@ import com.example.filmplayer.entity.UserInfo
 import com.example.filmplayer.service.MDBListService
 import com.example.filmplayer.service.UserService
 import com.squareup.picasso.Picasso
+
 
 class MovieDetailsFragment : Fragment(R.layout.fragment_movie_details) {
     private var _binding: FragmentMovieDetailsBinding? = null;
@@ -126,11 +128,47 @@ class MovieDetailsFragment : Fragment(R.layout.fragment_movie_details) {
             if (movieDetails.streams.isEmpty()) {
                 binding.streamingPlatformsDescription.text = resources.getString(R.string.streamingPlatformsNotAvailable)
             } else {
-                for (streamDTO in movieDetails.streams) {
-                    val button = TextView(requireContext())
-                    button.text = streamDTO.name
-                    binding.root.addView(button)
+                for (i in 0 until movieDetails.streams.size) {
+                    val streamTextView = TextView(requireContext())
+                    streamTextView.text = movieDetails.streams[i].name
+//                    binding.root.addView(streamTextView)
+                    streamTextView.textSize = 18.0f
+                    streamTextView.setPadding(40, 0,40,0)
+                    streamTextView.setTypeface(Typeface.DEFAULT_BOLD)
+                    streamTextView.setTextColor(ContextCompat.getColor(requireContext(), R.color.primaryDarkColor))
+                    binding.streamsLinearLayout.addView(streamTextView)
+
+                    if (i != movieDetails.streams.size-1) {
+                        val streamTextView = TextView(requireContext())
+                        streamTextView.text = "|"
+//                    binding.root.addView(streamTextView)
+                        streamTextView.textSize = 20.0f
+                        streamTextView.setTypeface(Typeface.DEFAULT_BOLD)
+                        streamTextView.setTextColor(ContextCompat.getColor(requireContext(), R.color.primaryColor))
+                        binding.streamsLinearLayout.addView(streamTextView)
+                    }
                 }
+
+
+//                for (streamDTO in movieDetails.streams) {
+//                    val streamTextView = TextView(requireContext())
+//                    streamTextView.text = streamDTO.name
+////                    binding.root.addView(streamTextView)
+//                    streamTextView.textSize = 20.0f
+//                    streamTextView.setTypeface(Typeface.DEFAULT_BOLD)
+//                    streamTextView.setTextColor(ContextCompat.getColor(requireContext(), R.color.primaryDarkColor))
+//                    binding.streamsLinearLayout.addView(streamTextView)
+//
+////                    val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(
+////                        LinearLayout.LayoutParams.WRAP_CONTENT,
+////                        LinearLayout.LayoutParams.WRAP_CONTENT
+////                    )
+////                    params.setMargins(10, 20, 10, 10)
+////
+////                    streamTextView.setLayoutParams(params)
+//
+//
+//                }
             }
         }
     }

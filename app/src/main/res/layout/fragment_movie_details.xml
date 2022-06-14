@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:gravity="center_horizontal"
 
+    android:orientation="vertical"
     tools:context=".fragment.MovieDetailsFragment">
 
     <ImageView
@@ -21,8 +22,18 @@
         style="@style/TextAppearance.Material3.TitleLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:textStyle="bold"
         tools:text="DEFAULT_TITLE" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/primaryTextColor" />
 
     <TextView
         android:id="@+id/movieDetailsReleaseDate"
@@ -30,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin"
-        android:gravity="center_vertical"
+        android:gravity="center_horizontal|center_vertical"
         tools:text="DEFAULT_DATE" />
 
     <TextView
@@ -39,68 +50,114 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin"
-        android:gravity="center_vertical"
+        android:justificationMode="inter_word"
+        android:textAlignment="center"
         tools:text="DEFAULT_DESCRIPTION" />
 
     <TextView
         android:id="@+id/movieDetailsScore"
         style="@style/TextAppearance.Material3.TitleMedium"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin"
-        android:gravity="center_vertical"
-        tools:text="DEFAULT_SCORE" />
+        android:drawableStart="@drawable/ic_baseline_star_rate_24"
+        android:drawablePadding="3dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/secondaryDarkColor"
+        tools:text="rating:  80/100" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/addToFavouritesBtn"
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/addToFavourites"
-            style="@style/TextAppearance.MaterialComponents.Body1"
-            />
+            android:textColor="@color/secondaryTextColor"
+            android:visibility="gone"
+            app:backgroundTint="@color/secondaryColor"
+            app:icon="@drawable/ic_dark_star_24"
+            app:iconTint="@color/common_google_signin_btn_text_dark_focused"
+            tools:visibility="gone" />
+
         <Button
             android:id="@+id/removeFromFavouritesBtn"
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/removeFromFavourites"
-            style="@style/TextAppearance.MaterialComponents.Body1"
-            />
+            android:textColor="@color/secondaryTextColor"
+            android:visibility="gone"
+            app:backgroundTint="@color/secondaryColor"
+            app:icon="@drawable/ic_dark_star_outline_24"
+            app:iconTint="@color/secondaryTextColor"
+            tools:visibility="visible" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/addToWatchlistBtn"
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/addToWatchlist"
-            style="@style/TextAppearance.MaterialComponents.Body1"
-            />
+            android:textColor="@color/primaryTextColor"
+            android:visibility="gone"
+            app:backgroundTint="@color/primaryColor"
+            app:icon="@drawable/camera"
+            app:iconSize="25dp"
+            app:iconTint="@color/common_google_signin_btn_text_light_disabled"
+            app:iconTintMode="add"
+            tools:visibility="gone" />
+
         <Button
             android:id="@+id/removeFromWatchlistBtn"
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/removeFromWatchlist"
             android:layout_gravity="center_horizontal"
-            style="@style/TextAppearance.MaterialComponents.Body1"
-            />
+            android:text="@string/removeFromWatchlist"
+            android:textColor="@color/primaryTextColor"
+            android:visibility="gone"
+            app:backgroundTint="@color/primaryColor"
+            app:icon="@drawable/ic_baseline_remove_circle_outline_24"
+            app:iconTint="@color/primaryTextColor"
+            tools:visibility="visible" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/streamingPlatformsDescription"
+        style="@style/TextAppearance.MaterialComponents.Body1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:text="@string/streamingPlatforms"
-        style="@style/TextAppearance.MaterialComponents.Body1"
         android:layout_marginTop="@dimen/margin"
-        />
+        android:background="@color/primaryTextColor"
+        android:text="@string/streamingPlatforms"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:id="@+id/streams_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+
 </LinearLayout>

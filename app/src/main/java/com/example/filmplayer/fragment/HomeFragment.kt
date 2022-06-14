@@ -86,6 +86,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }
 
             (activity as MainActivity?)!!.hideSoftKeyboard(binding.root)
+            binding.searchBar.setText("")
         }
     }
 

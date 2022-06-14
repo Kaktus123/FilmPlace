@@ -94,6 +94,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             //start profile activity
             requireView().findNavController().navigate(R.id.homeFragment)
         }
+        googleSignInClient.signOut()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
