@@ -13,16 +13,23 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolBar"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/icon_menu_48"
-            app:title="@string/app_name"
-            app:titleMarginStart="40dp"
-            />
+            app:navigationIcon="@drawable/ic_menu"
+            app:titleMarginStart="50dp">
+
+        <ImageView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/title" />
+            </androidx.appcompat.widget.Toolbar>
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView"

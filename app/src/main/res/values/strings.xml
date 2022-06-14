@@ -4,7 +4,7 @@
     <string name="close">Close</string>
     <string name="favourite">Favourites</string>
     <string name="watchlist">Watchlist</string>
-    <string name="logout">Logout</string>
+    <string name="logout">Log out</string>
     <string name="title">Title:</string>
     <string name="productionYear">Year of production:</string>
     <string name="searchBarHint">Enter movie title</string>

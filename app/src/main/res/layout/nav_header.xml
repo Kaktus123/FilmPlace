@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/purple_500">
+    android:background="@color/secondaryColor">
 
     <TextView
         android:id="@+id/welcomeTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:textColor="@color/secondaryTextColor"
         style="@style/TextAppearance.Material3.TitleLarge"
         android:layout_margin="10dp"
         />
