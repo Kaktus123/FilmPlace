@@ -87,6 +87,8 @@ class SearchResultsFragment : Fragment(R.layout.fragment_search_results) {
     }
 
     private fun populateListViewWithMoviesFound(movies: MoviesDTO) {
+        val lengthComparator = movies.search.sortedBy { it.title?.toString() }
+
         val mListView = requireView().findViewById<ListView>(R.id.moviesList)
 
         mListView.setOnItemClickListener { parent, view, position, id ->
@@ -98,7 +100,7 @@ class SearchResultsFragment : Fragment(R.layout.fragment_search_results) {
         }
 
         requireActivity().runOnUiThread {
-            mListView.adapter = MoviesFoundAdapter(movies.search, requireActivity().applicationContext)
+            mListView.adapter = MoviesFoundAdapter(lengthComparator, requireActivity().applicationContext)
         }
     }
 
